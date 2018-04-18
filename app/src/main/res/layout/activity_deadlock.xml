@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fcfs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context="com.example.android.cpuscheduling.Deadlock">
+
+<!---
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout`
+        android:orientation="vertical"
+        android:id="@+id/activity_deadlock"
+        android:background="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:id="@+id/card1"
+            card_view:layout_width="match_parent"
+            card_view:layout_height="wrap_content"
+            card_view:layout_margin="10dp"
+            card_view:cardBackgroundColor="#77070c41"
+            card_view:cardCornerRadius="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <TextView
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Banker's Algorithm"
+                />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:id="@+id/card2"
+            card_view:layout_width="match_parent"
+            card_view:layout_height="match_parent"
+            card_view:layout_marginLeft="10dp"
+            card_view:layout_marginRight="10dp"
+            card_view:layout_marginBottom="10dp"
+            card_view:cardBackgroundColor="#77070c41"
+            card_view:cardCornerRadius="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <LinearLayout
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                        android:id="@+id/textView8"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Allocation" />
+
+                    <LinearLayout
+                        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="P1 - " />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="P2 - " />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="P3 - " />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="P4 - " />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+                        <EditText
+                            android:theme="@style/AppTheme"
+                            android:textColor="#ffffff"
+                            android:id="@+id/e12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            <LinearLayout
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:text="Max"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/e13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+
+                    <EditText
+                        android:id="@+id/e14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+
+                    <EditText
+                        android:id="@+id/e15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/e16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+
+                    <EditText
+                        android:id="@+id/e17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+
+                    <EditText
+                        android:id="@+id/e18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/e19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+
+                    <EditText
+                        android:id="@+id/e20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+
+                    <EditText
+                        android:id="@+id/e21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/e22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+
+                    <EditText
+                        android:id="@+id/e23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+
+                    <EditText
+                        android:id="@+id/e24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                        android:textColor="#ffffff"
+                        android:theme="@style/AppTheme" />
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:id="@+id/card3"
+            card_view:layout_width="match_parent"
+            card_view:layout_height="match_parent"
+            card_view:layout_marginLeft="10dp"
+            card_view:layout_marginRight="10dp"
+            card_view:layout_marginBottom="10dp"
+            card_view:cardBackgroundColor="#77070c41"
+            card_view:cardCornerRadius="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:text=" Available" />
+
+    <LinearLayout
+        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <EditText
+            android:theme="@style/AppTheme"
+            android:textColor="#ffffff"
+            android:id="@+id/e25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+        <EditText
+            android:theme="@style/AppTheme"
+            android:textColor="#ffffff"
+            android:id="@+id/e26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+
+        <EditText
+            android:theme="@style/AppTheme"
+            android:textColor="#ffffff"
+            android:id="@+id/e27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" />
+    </LinearLayout>
+
+    <Button
+        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:onClick="submit" />
+</LinearLayout>
+</android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:id="@+id/card4"
+            card_view:layout_width="match_parent"
+            card_view:layout_height="match_parent"
+            card_view:layout_marginLeft="10dp"
+            card_view:layout_marginRight="10dp"
+            card_view:layout_marginBottom="10dp"
+            card_view:cardBackgroundColor="#77070c41"
+            card_view:cardCornerRadius="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/deadlock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/deadlock2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" />
+
+    <LinearLayout
+        android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:id="@+id/deadlock3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+</LinearLayout>
+</android.support.v7.widget.CardView></LinearLayout>
+</ScrollView>
+-->
+</LinearLayout>

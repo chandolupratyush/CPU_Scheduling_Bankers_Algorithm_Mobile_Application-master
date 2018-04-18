@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_srtf"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.cpuscheduling.Srtf">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:layout_gravity="center_vertical"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Shortest Remaining Time First"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/qasw"
+
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="ADD"
+            android:layout_margin="10dp"
+
+            android:textColor="#0b0101"
+            android:background="@drawable/qwerty"
+            android:textSize="20sp"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonClick" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="DELETE"
+            android:background="@drawable/qwerty"
+            android:textColor="#0b0101"
+            android:layout_margin="10dp"
+android:id="@+id/delete"
+            android:textSize="20sp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/qasw"
+        android:layout_weight="4">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/qasw"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/textview1srtf"
+    android:textColor="#ffffff"
+    android:textSize="20sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:background="@drawable/qasw"
+
+        android:orientation="horizontal">
+
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="RESET"
+            android:textColor="#0b0101"
+            android:background="@drawable/qwerty"
+            android:textSize="20sp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+
+            android:id="@+id/reset" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="COMPUTE"
+            android:textColor="#0b0101"
+            android:layout_margin="10dp"
+
+            android:textSize="20sp"
+            android:background="@drawable/qwerty"
+            android:layout_height="match_parent"
+            android:id="@+id/compute" />
+    </LinearLayout>
+</LinearLayout>
+
+
+
+

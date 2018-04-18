@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scheduling"
+    android:layout_width="match_parent"
+    android:background="@drawable/m2"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.cpuscheduling.Scheduling">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card1"
+        card_view:cardBackgroundColor="@color/cpucolor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/card_margin2"
+        android:layout_marginRight="@dimen/card_margin2"
+        card_view:cardCornerRadius="15dp"
+
+        android:layout_marginTop="@dimen/card_margin2"
+        android:onClick="gotosjf"
+        android:clickable="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="SJF"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card2"
+        card_view:cardBackgroundColor="@color/cpucolor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="gotosrtf"
+        android:layout_marginLeft="@dimen/card_margin2"
+        android:layout_marginRight="@dimen/card_margin2"
+        card_view:cardCornerRadius="15dp"
+
+        android:layout_marginTop="@dimen/card_margin2"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="SRTF"
+            android:id="@+id/textView4" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card3"
+        card_view:cardBackgroundColor="@color/cpucolor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="gotolrtf"
+        android:layout_marginLeft="@dimen/card_margin2"
+        android:layout_marginRight="@dimen/card_margin2"
+        android:layout_marginTop="@dimen/card_margin2"
+        card_view:cardCornerRadius="15dp"
+
+    android:clickable="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+
+            android:text="LRTF"
+            android:id="@+id/textView2" />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card4"
+        card_view:cardBackgroundColor="@color/cpucolor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/card_margin2"
+        android:layout_marginRight="@dimen/card_margin2"
+        android:layout_marginTop="@dimen/card_margin2"
+        android:onClick="gotofcfs"
+        card_view:cardCornerRadius="15dp"
+
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:onClick="gotofcfs"
+            android:textColor="@android:color/white"
+            android:text="FCFS"
+            android:id="@+id/textView" />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        card_view:cardBackgroundColor="@color/cpucolor"
+
+        android:layout_marginLeft="@dimen/card_margin2"
+        android:layout_marginRight="@dimen/card_margin2"
+        card_view:cardCornerRadius="15dp"
+
+        android:layout_marginTop="@dimen/card_margin2"
+        android:onClick="gotorr"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:gravity="center"
+
+            android:textColor="@android:color/white"
+            android:text="ROUND ROBIN"
+            android:id="@+id/textView5" />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card6"
+        card_view:cardBackgroundColor="@color/cpucolor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/card_margin2"
+        android:layout_marginRight="@dimen/card_margin2"
+        android:layout_marginTop="@dimen/card_margin2"
+        card_view:cardCornerRadius="15dp"
+
+        android:onClick="gotopp"
+        android:clickable="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:gravity="center"
+
+            android:textColor="@android:color/white"
+            android:text="PRIORITY(preemptive)"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card7"
+        card_view:cardBackgroundColor="@color/cpucolor"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/card_margin2"
+        card_view:cardCornerRadius="15dp"
+
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="gotopnp"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="PRIORITY(non-preemptive)"
+            android:id="@+id/textView3" />
+    </android.support.v7.widget.CardView>
+</LinearLayout>
